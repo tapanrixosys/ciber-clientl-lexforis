@@ -11,7 +11,7 @@ const icons = {
 
 const pages = {
   id: 'CRM',
-  title: 'CRM',
+  title: 'SERVICIOS',
   type: 'group',
   children: [
     {

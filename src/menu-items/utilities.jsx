@@ -28,7 +28,7 @@ const icons = {
 
 const utilities = {
   id: 'Services',
-  title: 'Services',
+  title: 'CUENTA',
   type: 'group',
   children: [
     // {
@@ -40,19 +40,19 @@ const utilities = {
     // },
     {
       id: 'util-color',
-      title: 'Clientes',
+      title: 'Mi cuenta',
       type: 'item',
       url: '/client',
       icon: icons.UserOutlined
     },
-    {
-      id: 'Services',
-      title: 'Services',
-      type: 'item',
-      url: '/services',
-      icon: icons.BarcodeOutlined
-    }
-    ,
+    // {
+    //   id: 'Services',
+    //   title: 'Services',
+    //   type: 'item',
+    //   url: '/services',
+    //   icon: icons.BarcodeOutlined
+    // }
+    
     // {
     //   id: 'Companias',
     //   title: 'Companias',

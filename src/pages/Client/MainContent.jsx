@@ -1,6 +1,9 @@
 import React from 'react';
 import ClientForm from './ClientForm';
-import Resuman from './Resuman';
+import Propidad from './Propidad';
+import RentalTypeForm from './RentalTypeForm'; 
+import SummaryForm from './Resumen';
+
 
 function MainContent({ activeItem }) {
   const mainContentStyle = {
@@ -10,7 +13,7 @@ function MainContent({ activeItem }) {
     boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',
+    height: '100%'
   };
 
   const responseButtonStyle = {
@@ -19,33 +22,57 @@ function MainContent({ activeItem }) {
     color: '#fff',
     border: 'none',
     borderRadius: '4px',
-    cursor: 'pointer',
+    cursor: 'pointer'
   };
 
   const renderContent = () => {
     switch (activeItem) {
       case 'app.models.210.start':
-        return <div>
-          <div style={{ textAlign:"center" }}><p> Indian lawyer, politician, social activist, and writer who became the leader of the Indian Independence Movement against British rule.</p></div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "20px" }}>
-            <button style={responseButtonStyle}>app.yes</button>
-            <button style={responseButtonStyle}>app.no</button>
+        return (
+          <div>
+            <div style={{ textAlign: 'center' }}>
+              <p>
+                {' '}
+                Indian lawyer, politician, social activist, and writer who became the leader of the Indian Independence Movement against
+                British rule.
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+              <button style={responseButtonStyle}>app.yes</button>
+              <button style={responseButtonStyle}>app.no</button>
+            </div>
           </div>
-        </div>;
+        );
       case 'app.models.210.personal_info':
-        return <div>
-          <ClientForm/>
-        </div>
+        return (
+          <div>
+            <ClientForm />
+          </div>
+        );
+
       case 'app.models.210.property_info':
         return <p>Property Info: This section contains property information.</p>;
+
       case 'app.models.210.property':
-        return <p>Property: This section contains details about properties.</p>;
+        return (
+          <div>
+            <Propidad />
+          </div>
+        );
+
       case 'app.models.210.rental_info':
-        return <p>Rental Info: This section contains rental information.</p>;
+        return (
+          <div>
+            <RentalTypeForm />
+          </div>
+        );
+
       case 'app.models.210.overview':
-        return <div>
-          <Resuman/>
-        </div>
+        return (
+          <div>
+            <SummaryForm />
+          </div>
+        );
       default:
         return null;
     }
@@ -53,10 +80,7 @@ function MainContent({ activeItem }) {
 
   return (
     <div style={mainContentStyle}>
-
-      <div style={{ marginTop: '20px' }}>
-        {renderContent()}
-      </div>
+      <div style={{ marginTop: '20px' }}>{renderContent()}</div>
     </div>
   );
 }

@@ -36,11 +36,11 @@ const ClientForm = () => {
                             <Select placeholder="F/J">
                                 <Option value="F">F</Option>
                                 <Option value="J">J</Option>
-                            </Select>
-                        </Form.Item>
+                            </Select>    
+                        </Form.Item>      
                     </Col>
                     <Col flex="1 1 60%">
-                        <Form.Item
+                        <Form.Item 
                             label="Apellidos y nombre"
                             name="name"
                             rules={[{ required: true, message: 'Please enter full name or company name!' }]}
