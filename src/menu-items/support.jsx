@@ -11,7 +11,7 @@ const icons = {
 
 const support = {
   id: 'support',
-  title: 'Adjust',
+  title: 'AJUSTES',
   type: 'group',
   children: [
     {

@@ -322,7 +322,7 @@ export default function ComponentColor() {
         </Modal.Footer>
       </Modal>
     </Box >
-       </div>
+       </div> 
 
 
   );
